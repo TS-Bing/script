@@ -1,0 +1,21 @@
+#-*- coding:utf-8 -*-
+print '''
+    #--------------------------------------------------#
+    #          WelCome to tsteam     #
+    #--------------------------------------------------#  
+     '''
+
+
+from random import choice
+import string
+
+def GenPassword(length=8,chars=string.ascii_letters+string.digits):
+    return ''.join([choice(chars) for i in range(length)])
+
+if __name__=="__main__":
+    for i in range(10):
+        #pwd len 15
+        print (GenPassword(15))
+ 
+import code        
+code.interact(banner = "", local = locals())
